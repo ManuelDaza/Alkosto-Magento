@@ -1,0 +1,205 @@
+<!-- Latest compiled and minified CSS -->
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+<style>
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .sep {
+        width: 100%;
+        height: 7px;
+        background: #ff5e1d;
+        margin: 1rem auto;
+    }
+
+    h3 {
+        background: #ff5e1d;
+        color: #FFF;
+        padding: 10px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        width: 30%;
+        margin: -1rem auto 1rem auto;
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #666;
+    }
+
+    .btn {
+        margin: 1rem auto;
+        padding: 10px;
+        background: #004e98;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 10px;
+        color: #FFF;
+    }
+
+    .wrapper .page .tire-search-main .container-result-promotion {
+        margin-left: 0;
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+
+    body .wrapper .page .tire-search-main .container-result-promotion {
+        /* margin-left: 21rem; */
+        min-height: auto !important;
+    }
+
+    @media screen and (max-width: 920px) {
+        .quedan {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .left,
+        .right {
+            float: none;
+        }
+
+        #contador {
+            font-size: 2rem;
+        }
+
+        h3 {
+            background: #ff5e1d;
+            color: #FFF;
+            padding: 10px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            width: 75%;
+            margin: -1.1rem auto 1rem auto;
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            font-weight: 400;
+            text-align: center;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        .margin-row-2 {
+            margin-top: 18px;
+        }
+    }
+
+    .margin-row {
+        margin-top: 18px;
+    }
+
+    .hover:hover {
+        box-shadow: 0px 0px 10px #e84f1d;
+        transition: 0.5s;
+    }
+
+    .col2-left-layout {
+        display: none !important;
+    }
+
+    .sidebar {
+        display: none !important;
+    }
+
+    .ak-inline-categories-title {
+        display: none !important;
+    }
+</style>
+<div class="container">
+    <!--Buscador de Llantas y Banners promocionales: Inicio-->
+    <div class="tire-search-main">
+        {{block type="core/template" name="tires.searchers" template="tires/searchers.phtml" alias="tires.searchers"}}
+        <div class="container-result-promotion">
+            <div id="partner-container-tires-result-clone" class="desktop" style="display: none;">
+                {{block type="banner/default" name="banner.banner" template="banner/banner.phtml" alias="Llantas-Banner-Alternativo"}}
+            </div>
+            <!-- AdGlare: Banner_Expollantas_Top -->
+            <span id="zone547516947">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?547516947"></script>
+        </div>
+    </div>
+    <div class="row">
+        <!-- AdGlare: Banner_Expollantas_Footer -->
+        <span id=zone714917005></span>
+        <script async src='//alkosto.engine.adglare.net/?714917005'></script>
+    </div>
+    
+    <!--    Section 1   -->
+    <div class="row margin-row">
+        <div class="col-md-6">
+            <!-- AdGlare: Banner_Expollantas_Destacado_1 -->
+            <span id="zone339665388" class="hover" style="display:block"></span>
+            <script src="//alkosto.engine.adglare.net/?339665388"></script>
+        </div>
+        <div class="col-md-6 margin-row-2">
+            <!-- AdGlare: Banner_Expollantas_Promo_1.1 --> <span id="zone361596544" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?361596544"></script>
+            <div style="margin-top: 18px;">
+                <!-- AdGlare: Banner_Expollantas_Promo_1.2 --> <span id="zone887357753" class="hover">&nbsp;</span>
+                <script src="//alkosto.engine.adglare.net/?887357753"></script>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-row">
+        <div class="col-md-6">
+            <!-- AdGlare: Banner_Expollantas_Promo_1.3 --> <span id="zone947393330" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?947393330"></script>
+        </div>
+        <div class="col-md-6 margin-row-2">
+            <!-- AdGlare: Banner_Expollantas_Promo_1.4 --> <span id="zone376122082" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?376122082"></script>
+        </div>
+    </div>
+    <!--   Fin Section 1   -->
+    <!--    Section 2   -->
+    <div id="seccionDos" class="row" style="margin-top: 50px;">
+        <div class="col-md-6">
+            <!-- AdGlare: Banner_Expollantas_Promo_2.1 --> <span id="zone165154165" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?165154165"></script>
+            <div style="margin-top: 18px;">
+                <!-- AdGlare: Banner_Expollantas_Promo_2.2 --> <span id="zone534773286" class="hover">&nbsp;</span>
+                <script src="//alkosto.engine.adglare.net/?534773286"></script>
+            </div>
+        </div>
+        <div class="col-md-6 margin-row-2">
+            <!-- AdGlare: Banner_Expollantas_Destacado_2 --> <span id="zone278736374" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?278736374"></script>
+        </div>
+    </div>
+    <div class="row margin-row">
+        <div class="col-md-6">
+            <!-- AdGlare: Banner_Expollantas_Promo_2.3 --> <span id="zone154283483" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?154283483"></script>
+        </div>
+        <div class="col-md-6 margin-row-2">
+            <!-- AdGlare: Banner_Expollantas_Promo_2.4 --> <span id="zone319126045" class="hover">&nbsp;</span>
+            <script src="//alkosto.engine.adglare.net/?319126045"></script>
+        </div>
+    </div>
+</div>
+<!--   Fin Section 2   -->
