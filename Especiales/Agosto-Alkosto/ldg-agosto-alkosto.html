@@ -19,6 +19,1196 @@
 
     <title>Agosto Alkosto</title>
 
+
+
+    <style>
+        body {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .outer_ele {
+            display: none !important;
+        }
+
+        .row {
+            transition: 0.5s;
+        }
+
+        .row-nav {
+            position: sticky;
+            top: 5.2rem;
+            z-index: 11;
+        }
+
+        .principal-nav {
+            height: 90px;
+            background: #E5E5E5;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            text-align: center;
+
+        }
+
+        .txt-nav-bar {
+            font-size: 11px;
+        }
+
+        .btn-category {
+            background: white;
+            color: #E95D28;
+            display: inline-block;
+            text-align: center;
+            width: 69px;
+            height: 69px;
+            padding-top: 13px;
+            margin-top: 13px;
+            margin-right: 10px;
+            transition: 0.4s;
+        }
+
+        .btn-category:hover {
+            text-decoration: none;
+        }
+
+        .space-row {
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        .icon-category {
+            text-align: center;
+            margin: 0 auto;
+            width: 15%;
+        }
+
+        .center-icon-category {
+            transform: rotate(-45deg);
+            margin-top: 13px;
+            font-size: 40px;
+
+        }
+
+        .filete-left {
+            width: 43%;
+            float: left;
+            border-bottom: 1px solid #E95D28;
+            margin-top: 35px;
+        }
+
+        .filete-right {
+            width: 43%;
+            float: right;
+            border-bottom: 1px solid #E95D28;
+            margin-top: -35px;
+        }
+
+        .titlte-section {
+            color: #E95D28;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .btn-ver-mas {
+            background: #E95D28;
+            color: white;
+            text-align: center;
+            padding: 13px 115px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: 0.7s;
+        }
+
+        .btn-ver-mas:hover {
+            text-decoration: none;
+            background: white;
+            color: #E95D28;
+            border: 1px solid #E95D28;
+        }
+
+        .banner_web {
+            display: block;
+        }
+
+        .banner_web img {
+            width: 100%;
+            height: auto;
+            margin-top: 35px;
+        }
+
+
+
+
+        @media screen and (max-width: 520px) {
+
+            .filete-left {
+                width: 31%;
+            }
+
+            .filete-right {
+                width: 31%;
+            }
+
+            .margin-mobile {
+                margin-top: 13px;
+            }
+
+            #secondSectioncategory {
+                display: none;
+            }
+
+            .banner_web {
+                display: none !important;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!--  menu bar    -->
+    <div class="container-fluid row-nav">
+        <div class="row">
+            <div class="col-md-12 principal-nav">
+                <a class="btn-category" href="#" onClick="showAll()">
+                    <p class="txt-nav-bar">Ver todas<br>las ofertas</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyCelular()"><i class="material-icons">settings_cell</i>
+                    <p class="txt-nav-bar">Celulares</p>
+                </a>
+                <a href="#" class="tv btn-category" onClick="onlyTv()"><i class="material-icons">tv</i>
+                    <p class="txt-nav-bar">Televisores</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyInformatica()"><i class="material-icons">laptop</i>
+                    <p class="txt-nav-bar">Informática</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyElectro()"><i
+                        class="material-icons">local_laundry_service</i>
+                    <p class="txt-nav-bar">Electrohogar</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyAudio()"><i class="material-icons">surround_sound</i>
+                    <p class="txt-nav-bar">Audio</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyImpresoras()"><i class="material-icons">print</i>
+                    <p class="txt-nav-bar">Impresoras</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyVideojuegos()"><i
+                        class="material-icons">videogame_asset</i>
+                    <p class="txt-nav-bar">Videojuegos</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyAccesorios()"><i class="material-icons">usb</i>
+                    <p class="txt-nav-bar">Accesorios</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyCamaras()"><i class="material-icons">photo_camera</i>
+                    <p class="txt-nav-bar">Cámaras</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyWatch()"><i class="material-icons">watch</i>
+                    <p class="txt-nav-bar">Smartwatch</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyHogar()"><i class="material-icons">home</i>
+                    <p class="txt-nav-bar">Hogar</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyJuguetes()"><i class="material-icons">casino</i>
+                    <p class="txt-nav-bar">Juguetes</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyLlantas()"><i class="material-icons">directions_car</i>
+                    <p class="txt-nav-bar">Llantas</p>
+                </a>
+                <a href="#" class="btn-category" onClick="onlyDeporte()"><i class="material-icons">directions_run</i>
+                    <p class="txt-nav-bar">Deportes</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- fin  menu bar    -->
+
+
+    <div class="banner_web"><a href="https://www.alkosto.com/especiales/agosto-alkosto"> <img
+                src="https://alkosto.cdn.adglare.net/img/474xt_38cfrh_457cdc34.jpg" alt="" /> </a></div>
+    <div class="container">
+
+        <!-- Ofertas de Lokura!!!  -->
+        <div class="row space-row" id="ofertasMiercoles">
+
+            <div class="col-md-3 col-xs-6 ofertas">
+                <!-- AdGlare: Ldg-Agos-Miercoles-01 -->
+                <span id=zone392291619></span>
+                <script async src='//alkosto.engine.adglare.net/?392291619'></script>
+            </div>
+            <div class="col-md-3 col-xs-6 ofertas">
+                <!-- AdGlare: Ldg-Agos-Miercoles-02 -->
+                <span id=zone592289308></span>
+                <script async src='//alkosto.engine.adglare.net/?592289308'></script>
+            </div>
+            <div class="col-md-3 col-xs-6 ofertas">
+                <!-- AdGlare: Ldg-Agos-Miercoles-03 -->
+                <span id=zone447099267></span>
+                <script async src='//alkosto.engine.adglare.net/?447099267'></script>
+            </div>
+            <div class="col-md-3 col-xs-6 ofertas">
+                <!-- AdGlare: Ldg-Agos-Miercoles-04 -->
+                <span id=zone114088944></span>
+                <script async src='//alkosto.engine.adglare.net/?114088944'></script>
+            </div>
+        </div>
+        <!-- Fin Ofertas de Lokura!!!    -->
+
+        <!-- Celulares    -->
+        <div class="celular row" id="categoriaCelulares" style="margin-top: 30px; display: block;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Celulares</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Cel-01 -->
+                    <span id=zone741469785></span>
+                    <script async src='//alkosto.engine.adglare.net/?741469785'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Cel-02 -->
+                    <span id=zone972746472></span>
+                    <script async src='//alkosto.engine.adglare.net/?972746472'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Cel-03 -->
+                    <span id=zone167182491></span>
+                    <script async src='//alkosto.engine.adglare.net/?167182491'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Cel-04 -->
+                    <span id=zone919694486></span>
+                    <script async src='//alkosto.engine.adglare.net/?919694486'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Cel-05 -->
+                    <span id=zone407405972></span>
+                    <script async src='//alkosto.engine.adglare.net/?407405972'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Cel-06 -->
+                        <span id=zone157751170></span>
+                        <script async src='//alkosto.engine.adglare.net/?157751170'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Cel-07 -->
+                        <span id=zone695789612></span>
+                        <script async src='//alkosto.engine.adglare.net/?695789612'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Cel-08 -->
+                        <span id=zone109178658></span>
+                        <script async src='//alkosto.engine.adglare.net/?109178658'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Cel-09 -->
+                        <span id=zone840433914></span>
+                        <script async src='//alkosto.engine.adglare.net/?840433914'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Cel-10 -->
+                    <span id=zone883232049></span>
+                    <script async src='//alkosto.engine.adglare.net/?883232049'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/telefonos-celulares">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Celulares    -->
+
+        <!-- Televisores    -->
+        <div class="row tv" id="categoriaTelevisores" style="margin-top: 50px; display: block;">
+            <div class="col-md-12">
+                <div class="icon-category">
+                    <p class="titlte-section">Televisores</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Tv-01 -->
+                    <span id=zone718246774></span>
+                    <script async src='//alkosto.engine.adglare.net/?718246774'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Tv-02 -->
+                    <span id=zone555193002></span>
+                    <script async src='//alkosto.engine.adglare.net/?555193002'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Tv-03 -->
+                    <span id=zone108141100></span>
+                    <script async src='//alkosto.engine.adglare.net/?108141100'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Tv-04 -->
+                    <span id=zone297301146></span>
+                    <script async src='//alkosto.engine.adglare.net/?297301146'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Tv-05 -->
+                    <span id=zone939871129></span>
+                    <script async src='//alkosto.engine.adglare.net/?939871129'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Tv-06 -->
+                        <span id=zone419972272></span>
+                        <script async src='//alkosto.engine.adglare.net/?419972272'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Tv-07 -->
+                        <span id=zone367798646></span>
+                        <script async src='//alkosto.engine.adglare.net/?367798646'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Tv-08 -->
+                        <span id=zone295246519></span>
+                        <script async src='//alkosto.engine.adglare.net/?295246519'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Tv-09 -->
+                        <span id=zone711608225></span>
+                        <script async src='//alkosto.engine.adglare.net/?711608225'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Tv-10 -->
+                    <span id=zone516652315></span>
+                    <script async src='//alkosto.engine.adglare.net/?516652315'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/tv">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Televisores    -->
+
+        <!-- Informatica    -->
+        <div class="row" id="categoriaInformatica" style="margin-top: 50px;">
+            <div class="col-md-12">
+                <div class="icon-category">
+                    <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Informática</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Informatica-01 -->
+                    <span id=zone514708017></span>
+                    <script async src='//alkosto.engine.adglare.net/?514708017'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Informatica-02 -->
+                    <span id=zone898505149></span>
+                    <script async src='//alkosto.engine.adglare.net/?898505149'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Informatica-03 -->
+                    <span id=zone680166388></span>
+                    <script async src='//alkosto.engine.adglare.net/?680166388'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Informatica-04 -->
+                    <span id=zone588753468></span>
+                    <script async src='//alkosto.engine.adglare.net/?588753468'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Informatica-05 -->
+                    <span id=zone646284084></span>
+                    <script async src='//alkosto.engine.adglare.net/?646284084'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Informatica-06 -->
+                        <span id=zone691727965></span>
+                        <script async src='//alkosto.engine.adglare.net/?691727965'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Informatica-07 -->
+                        <span id=zone142491897></span>
+                        <script async src='//alkosto.engine.adglare.net/?142491897'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Informatica-08 -->
+                        <span id=zone164143320></span>
+                        <script async src='//alkosto.engine.adglare.net/?164143320'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Informatica-09 -->
+                        <span id=zone173858364></span>
+                        <script async src='//alkosto.engine.adglare.net/?173858364'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Informatica-10 -->
+                    <span id=zone230826939></span>
+                    <script async src='//alkosto.engine.adglare.net/?230826939'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/computadores-y-tablets">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Informatica    -->
+
+        <!-- Electrohogar    -->
+        <div class="row" id="categoriaElectro" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Electrohogar</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-electro-01 -->
+                    <span id=zone644451756></span>
+                    <script async src='//alkosto.engine.adglare.net/?644451756'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-electro-02 -->
+                    <span id=zone475013840></span>
+                    <script async src='//alkosto.engine.adglare.net/?475013840'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-electro-03 -->
+                    <span id=zone713198060></span>
+                    <script async src='//alkosto.engine.adglare.net/?713198060'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-electro-04 -->
+                    <span id=zone326794196></span>
+                    <script async src='//alkosto.engine.adglare.net/?326794196'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-electro-05 -->
+                    <span id=zone480031134></span>
+                    <script async src='//alkosto.engine.adglare.net/?480031134'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-electro-06 -->
+                        <span id=zone120673906></span>
+                        <script async src='//alkosto.engine.adglare.net/?120673906'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-electro-07 -->
+                        <span id=zone934485996></span>
+                        <script async src='//alkosto.engine.adglare.net/?934485996'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-electro-08 -->
+                        <span id=zone528947789></span>
+                        <script async src='//alkosto.engine.adglare.net/?528947789'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-electro-09 -->
+                        <span id=zone864176552></span>
+                        <script async src='//alkosto.engine.adglare.net/?864176552'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-electro-10 -->
+                    <span id=zone225033472></span>
+                    <script async src='//alkosto.engine.adglare.net/?225033472'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/electro">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Electrohogar    -->
+
+        <!-- Audio    -->
+        <div class="row" id="categoriaAudio" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Audio</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Audio-01 -->
+                    <span id=zone934413748></span>
+                    <script async src='//alkosto.engine.adglare.net/?934413748'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Audio-02 -->
+                    <span id=zone296336243></span>
+                    <script async src='//alkosto.engine.adglare.net/?296336243'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Audio-03 -->
+                    <span id=zone117229347></span>
+                    <script async src='//alkosto.engine.adglare.net/?117229347'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Audio-04 -->
+                    <span id=zone239068405></span>
+                    <script async src='//alkosto.engine.adglare.net/?239068405'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Audio-05 -->
+                    <span id=zone202375011></span>
+                    <script async src='//alkosto.engine.adglare.net/?202375011'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Audio-06 -->
+                        <span id=zone270071394></span>
+                        <script async src='//alkosto.engine.adglare.net/?270071394'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Audio-07 -->
+                        <span id=zone673045153></span>
+                        <script async src='//alkosto.engine.adglare.net/?673045153'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Audio-08 -->
+                        <span id=zone336987542></span>
+                        <script async src='//alkosto.engine.adglare.net/?336987542'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Audio-09 -->
+                        <span id=zone720626740></span>
+                        <script async src='//alkosto.engine.adglare.net/?720626740'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Audio-10 -->
+                    <span id=zone983914998></span>
+                    <script async src='//alkosto.engine.adglare.net/?983914998'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/audio">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Audio    -->
+
+        <!-- Impresoras    -->
+        <div class="row" id="categoriaImpresoras" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Impresoras</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Impre-01 -->
+                    <span id=zone267428374></span>
+                    <script async src='//alkosto.engine.adglare.net/?267428374'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Impre-02 -->
+                    <span id=zone812735856></span>
+                    <script async src='//alkosto.engine.adglare.net/?812735856'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Impre-03 -->
+                    <span id=zone288893484></span>
+                    <script async src='//alkosto.engine.adglare.net/?288893484'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Impre-04 -->
+                    <span id=zone171182133></span>
+                    <script async src='//alkosto.engine.adglare.net/?171182133'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Impre-05 -->
+                    <span id=zone176916642></span>
+                    <script async src='//alkosto.engine.adglare.net/?176916642'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/impresion">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Impresoras    -->
+
+        <!-- Videojuegos    -->
+        <div class="row" id="categoriaVideojuegos" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Videojuegos</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-01 -->
+                    <span id=zone766571956></span>
+                    <script async src='//alkosto.engine.adglare.net/?766571956'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-02 -->
+                    <span id=zone285561310></span>
+                    <script async src='//alkosto.engine.adglare.net/?285561310'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-03 -->
+                    <span id=zone707787458></span>
+                    <script async src='//alkosto.engine.adglare.net/?707787458'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-04 -->
+                    <span id=zone783445383></span>
+                    <script async src='//alkosto.engine.adglare.net/?783445383'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-05 -->
+                    <span id=zone408706674></span>
+                    <script async src='//alkosto.engine.adglare.net/?408706674'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Videojuegos-06 -->
+                        <span id=zone355952457></span>
+                        <script async src='//alkosto.engine.adglare.net/?355952457'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Videojuegos-07 -->
+                        <span id=zone224558076></span>
+                        <script async src='//alkosto.engine.adglare.net/?224558076'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Videojuegos-08 -->
+                        <span id=zone305873016></span>
+                        <script async src='//alkosto.engine.adglare.net/?305873016'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Videojuegos-09 -->
+                        <span id=zone797854583></span>
+                        <script async src='//alkosto.engine.adglare.net/?797854583'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Videojuegos-10 -->
+                    <span id=zone708137204></span>
+                    <script async src='//alkosto.engine.adglare.net/?708137204'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/videojuegos">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Videojuegos    -->
+
+        <!-- Accesorios    -->
+        <div class="row" id="categoriaAccesorios" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Accesorios</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Acceso-01 -->
+                    <span id=zone120126522></span>
+                    <script async src='//alkosto.engine.adglare.net/?120126522'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Acceso-02 -->
+                    <span id=zone585753904></span>
+                    <script async src='//alkosto.engine.adglare.net/?585753904'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Acceso-03 -->
+                    <span id=zone605704053></span>
+                    <script async src='//alkosto.engine.adglare.net/?605704053'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Acceso-04 -->
+                    <span id=zone164066249></span>
+                    <script async src='//alkosto.engine.adglare.net/?164066249'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Acceso-05 -->
+                    <span id=zone679141109></span>
+                    <script async src='//alkosto.engine.adglare.net/?679141109'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Acceso-06 -->
+                        <span id=zone466634193></span>
+                        <script async src='//alkosto.engine.adglare.net/?466634193'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Acceso-07 -->
+                        <span id=zone548144073></span>
+                        <script async src='//alkosto.engine.adglare.net/?548144073'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Acceso-08 -->
+                        <span id=zone721091503></span>
+                        <script async src='//alkosto.engine.adglare.net/?721091503'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Acceso-09 -->
+                        <span id=zone719881747></span>
+                        <script async src='//alkosto.engine.adglare.net/?719881747'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Acceso-10 -->
+                    <span id=zone785837533></span>
+                    <script async src='//alkosto.engine.adglare.net/?785837533'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/accesorios">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Accesorios    -->
+
+        <!-- Cámaras    -->
+        <div class="row" id="categoriaCamaras" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Cámaras</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Camaras-01 -->
+                    <span id=zone508781096></span>
+                    <script async src='//alkosto.engine.adglare.net/?508781096'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Camaras-02 -->
+                    <span id=zone675593237></span>
+                    <script async src='//alkosto.engine.adglare.net/?675593237'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Camaras-03 -->
+                    <span id=zone379749771></span>
+                    <script async src='//alkosto.engine.adglare.net/?379749771'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Camaras-04 -->
+                    <span id=zone526557390></span>
+                    <script async src='//alkosto.engine.adglare.net/?526557390'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Camaras-05 -->
+                    <span id=zone225619433></span>
+                    <script async src='//alkosto.engine.adglare.net/?225619433'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Camaras-06 -->
+                        <span id=zone268875026></span>
+                        <script async src='//alkosto.engine.adglare.net/?268875026'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Camaras-07 -->
+                        <span id=zone393477247></span>
+                        <script async src='//alkosto.engine.adglare.net/?393477247'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Camaras-08 -->
+                        <span id=zone957172064></span>
+                        <script async src='//alkosto.engine.adglare.net/?957172064'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Camaras-09 -->
+                        <span id=zone218762195></span>
+                        <script async src='//alkosto.engine.adglare.net/?218762195'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Camaras-10 -->
+                    <span id=zone505857816></span>
+                    <script async src='//alkosto.engine.adglare.net/?505857816'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/camaras">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Cámaras    -->
+
+        <!-- Smartwatch    -->
+        <div class="row" id="categoriaWatch" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Smartwatch</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Watch-01 -->
+                    <span id=zone711551216></span>
+                    <script async src='//alkosto.engine.adglare.net/?711551216'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Watch-02 -->
+                    <span id=zone537966600></span>
+                    <script async src='//alkosto.engine.adglare.net/?537966600'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Watch-03 -->
+                    <span id=zone279334108></span>
+                    <script async src='//alkosto.engine.adglare.net/?279334108'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/relojes-inteligentes">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Smartwatch    -->
+
+        <!-- Hogar    -->
+        <div class="row" id="categoriaHogar" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Hogar</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Home-01 -->
+                    <span id=zone700494260></span>
+                    <script async src='//alkosto.engine.adglare.net/?700494260'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Home-02 -->
+                    <span id=zone877275713></span>
+                    <script async src='//alkosto.engine.adglare.net/?877275713'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Home-03 -->
+                    <span id=zone724659164></span>
+                    <script async src='//alkosto.engine.adglare.net/?724659164'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Home-04 -->
+                    <span id=zone839145884></span>
+                    <script async src='//alkosto.engine.adglare.net/?839145884'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Home-05 -->
+                    <span id=zone405955959></span>
+                    <script async src='//alkosto.engine.adglare.net/?405955959'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Home-06 -->
+                        <span id=zone329283712></span>
+                        <script async src='//alkosto.engine.adglare.net/?329283712'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Home-07 -->
+                        <span id=zone954219322></span>
+                        <script async src='//alkosto.engine.adglare.net/?954219322'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Home-08 -->
+                        <span id=zone685506707></span>
+                        <script async src='//alkosto.engine.adglare.net/?685506707'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Home-09 -->
+                        <span id=zone269751604></span>
+                        <script async src='//alkosto.engine.adglare.net/?269751604'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Home-10 -->
+                    <span id=zone619346691></span>
+                    <script async src='//alkosto.engine.adglare.net/?619346691'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/hogar">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Hogar    -->
+
+        <!-- Juguetes    -->
+        <div class="row" id="categoriaJuguetes" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section">Juguetes</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-01 -->
+                    <span id=zone350638212></span>
+                    <script async src='//alkosto.engine.adglare.net/?350638212'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-02 -->
+                    <span id=zone926673189></span>
+                    <script async src='//alkosto.engine.adglare.net/?926673189'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-03 -->
+                    <span id=zone133526854></span>
+                    <script async src='//alkosto.engine.adglare.net/?133526854'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-04 -->
+                    <span id=zone558357761></span>
+                    <script async src='//alkosto.engine.adglare.net/?558357761'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-05 -->
+                    <span id=zone333906617></span>
+                    <script async src='//alkosto.engine.adglare.net/?333906617'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Juguetes-06 -->
+                        <span id=zone660873082></span>
+                        <script async src='//alkosto.engine.adglare.net/?660873082'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Juguetes-07 -->
+                        <span id=zone483881858></span>
+                        <script async src='//alkosto.engine.adglare.net/?483881858'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Juguetes-08 -->
+                        <span id=zone526953555></span>
+                        <script async src='//alkosto.engine.adglare.net/?526953555'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Juguetes-09 -->
+                        <span id=zone559039691></span>
+                        <script async src='//alkosto.engine.adglare.net/?559039691'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Juguetes-10 -->
+                    <span id=zone581061877></span>
+                    <script async src='//alkosto.engine.adglare.net/?581061877'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/jugueteria">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Juguetes    -->
+
+        <!-- Llantas    -->
+        <div class="row" id="categoriaLlantas" style="margin-top: 50px;">
+            <div class="col-md-12">
+                <div class="icon-category">
+                    <p class="titlte-section">Llantas</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Llantas-01 -->
+                    <span id=zone102264050></span>
+                    <script async src='//alkosto.engine.adglare.net/?102264050'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Llantas-02 -->
+                    <span id=zone937313252></span>
+                    <script async src='//alkosto.engine.adglare.net/?937313252'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Llantas-03 -->
+                    <span id=zone756962160></span>
+                    <script async src='//alkosto.engine.adglare.net/?756962160'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Llantas-04 -->
+                    <span id=zone415954345></span>
+                    <script async src='//alkosto.engine.adglare.net/?415954345'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Llantas-05 -->
+                    <span id=zone310542085></span>
+                    <script async src='//alkosto.engine.adglare.net/?310542085'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Llantas-06 -->
+                        <span id=zone483018800></span>
+                        <script async src='//alkosto.engine.adglare.net/?483018800'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Llantas-07 -->
+                        <span id=zone301797426></span>
+                        <script async src='//alkosto.engine.adglare.net/?301797426'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Llantas-08 -->
+                        <span id=zone800201419></span>
+                        <script async src='//alkosto.engine.adglare.net/?800201419'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Llantas-09 -->
+                        <span id=zone560789450></span>
+                        <script async src='//alkosto.engine.adglare.net/?560789450'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Llantas-10 -->
+                    <span id=zone646445329></span>
+                    <script async src='//alkosto.engine.adglare.net/?646445329'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/autos/llantas">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Llantas    -->
+
+        <!-- Deportes    -->
+        <div class="row" id="categoriaDeportes" style="margin-top: 50px;">
+            <div class="col-md-12">
+
+                <div class="icon-category">
+                    <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Deportes</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Deportes-01 -->
+                    <span id=zone412603904></span>
+                    <script async src='//alkosto.engine.adglare.net/?412603904'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Deportes-02 -->
+                    <span id=zone363196515></span>
+                    <script async src='//alkosto.engine.adglare.net/?363196515'></script>
+                </div>
+                <div class="col-md-4 margin-mobile">
+                    <!-- AdGlare: Ldg-Agos-Deportes-03 -->
+                    <span id=zone580388794></span>
+                    <script async src='//alkosto.engine.adglare.net/?580388794'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Deportes-04 -->
+                    <span id=zone671691171></span>
+                    <script async src='//alkosto.engine.adglare.net/?671691171'></script>
+                </div>
+                <div class="col-md-4" style="margin-top:13px;">
+                    <!-- AdGlare: Ldg-Agos-Deportes-05 -->
+                    <span id=zone104582708></span>
+                    <script async src='//alkosto.engine.adglare.net/?104582708'></script>
+                </div>
+            </div>
+            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
+                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Deportes-06 -->
+                        <span id=zone230995471></span>
+                        <script async src='//alkosto.engine.adglare.net/?230995471'></script>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- AdGlare: Ldg-Agos-Deportes-07 -->
+                        <span id=zone968389945></span>
+                        <script async src='//alkosto.engine.adglare.net/?968389945'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Deportes-08 -->
+                        <span id=zone409668171></span>
+                        <script async src='//alkosto.engine.adglare.net/?409668171'></script>
+                    </div>
+                    <div class="col-md-6" style="margin-top:13px;">
+                        <!-- AdGlare: Ldg-Agos-Deportes-09 -->
+                        <span id=zone694429264></span>
+                        <script async src='//alkosto.engine.adglare.net/?694429264'></script>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- AdGlare: Ldg-Agos-Deportes-10 -->
+                    <span id=zone826851762></span>
+                    <script async src='//alkosto.engine.adglare.net/?826851762'></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+                    <a class="btn-ver-mas" href="https://www.alkosto.com/gimnasio">Ver más ofertas</a>
+                </div>
+            </div>
+        </div>
+        <!--    Fin Deportes    -->
+
+    </div>
+
     <script>
         function showAll() {
             document.getElementById("ofertasMiercoles").style.display = "block";
@@ -55,7 +1245,6 @@
             document.getElementById("categoriaDeportes").style.display = "none";
         }
         function onlyTv() {
-            document.getElementById("ofertasMiercoles").style.display = "none";
             document.getElementById("categoriaCelulares").style.display = "none";
             document.getElementById("categoriaTelevisores").style.display = "block";
             document.getElementById("categoriaInformatica").style.display = "none";
@@ -72,7 +1261,6 @@
             document.getElementById("categoriaDeportes").style.display = "none";
         }
         function onlyInformatica() {
-            document.getElementById("ofertasMiercoles").style.display = "none";
             document.getElementById("categoriaCelulares").style.display = "none";
             document.getElementById("categoriaTelevisores").style.display = "none";
             document.getElementById("categoriaInformatica").style.display = "block";
@@ -89,7 +1277,6 @@
             document.getElementById("categoriaDeportes").style.display = "none";
         }
         function onlyElectro() {
-            document.getElementById("ofertasMiercoles").style.display = "none";
             document.getElementById("categoriaCelulares").style.display = "none";
             document.getElementById("categoriaTelevisores").style.display = "none";
             document.getElementById("categoriaInformatica").style.display = "none";
@@ -276,1344 +1463,6 @@
             document.getElementById("categoriaDeportes").style.display = "block";
         }
     </script>
-
-    <style>
-        body {
-            margin: 0px !important;
-            padding: 0px !important;
-        }
-
-        .outer_ele {
-            display: none !important;
-        }
-
-        .row {
-            transition: 0.5s;
-        }
-
-        .row-nav {
-            position: sticky;
-            top: 3.1rem;
-            z-index: 11;
-        }
-
-        .principal-nav {
-            height: 90px;
-            background: #E5E5E5;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            white-space: nowrap;
-            text-align: center;
-
-        }
-
-        .txt-nav-bar {
-            font-size: 11px;
-        }
-
-        .btn-category {
-            background: white;
-            color: #E95D28;
-            display: inline-block;
-            text-align: center;
-            width: 69px;
-            height: 69px;
-            padding-top: 13px;
-            margin-top: 13px;
-            margin-right: 10px;
-            transition: 0.4s;
-        }
-
-        .btn-category:hover {
-            text-decoration: none;
-        }
-
-        .space-row {
-            margin-top: 35px;
-            margin-bottom: 25px;
-        }
-
-        .icon-category {
-            background: #E95D28;
-            color: white;
-            width: 70px;
-            height: 70px;
-            text-align: center;
-            transform: rotate(45deg);
-            margin: 0 auto;
-        }
-
-        .center-icon-category {
-            transform: rotate(-45deg);
-            margin-top: 13px;
-            font-size: 40px;
-
-        }
-
-        .filete-left {
-            width: 43%;
-            float: left;
-            border-bottom: 1px solid #E95D28;
-            margin-top: 35px;
-        }
-
-        .filete-right {
-            width: 43%;
-            float: right;
-            border-bottom: 1px solid #E95D28;
-            margin-top: -35px;
-        }
-
-        .titlte-section {
-            color: #E95D28;
-            font-size: 25px;
-            text-align: center;
-        }
-
-        .btn-ver-mas {
-            background: #E95D28;
-            color: white;
-            text-align: center;
-            padding: 13px 115px;
-            width: 100%;
-            border-radius: 10px;
-            font-size: 20px;
-            transition: 0.7s;
-        }
-
-        .btn-ver-mas:hover {
-            text-decoration: none;
-            background: white;
-            color: #E95D28;
-            border: 1px solid #E95D28;
-        }
-
-
-        @media screen and (max-width: 1900px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 26.3rem !important;
-} 
-} 
-    
-    
- @media screen and (max-width: 1800px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 24.7rem !important;
-} 
-}
-    
-
-    
-     @media screen and (max-width: 1700px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 23.4rem !important;
-} 
-} 
-    
- @media screen and (max-width: 1600px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 22rem !important;
-} 
-}     
-    
- @media screen and (min-width: 1920px) { 
-    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-        height: 25rem !important;
-    }
-    
-    }  
-    
-    @media screen and (max-width: 1500px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 20.7rem !important;
-} 
-}  
-    
-    @media screen and (max-width: 1400px) {    
-    body .wrapper .page .bannerpro-container .bannerpro ul {
-        height: 19.1rem !important;
-} 
-} 
-    
-@media screen and (max-width: 1366px){
-body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 19rem !important;
-}
-} 
-@media screen and (max-width: 1300px){
-body .wrapper .page .bannerpro-container .bannerpro ul {
-    height: 18rem !important;
-}
-}
-
-
-
-        @media screen and (max-width: 520px) {
-
-            .filete-left {
-                width: 31%;
-            }
-
-            .filete-right {
-                width: 31%;
-            }
-
-            .margin-mobile {
-                margin-top: 13px;
-            }
-
-            #secondSectioncategory {
-                display: none;
-            }
-
-        }
-    </style>
-</head>
-
-
-<body>
-        <div class="home-slider banner_mobile">{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="banner_top_AgostoAlkosto"}}</div>
-    <!--  menu bar    -->
-    <div class="container-fluid row-nav">
-        <div class="row">
-            <div class="col-md-12 principal-nav">
-                <a class="btn-category" href="#" onClick="showAll()">
-                    <p class="txt-nav-bar">Ver todas <br> las ofertas</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyCelular()"><i class="material-icons">settings_cell</i>
-                    <p class="txt-nav-bar">Celulares</p>
-                </a>
-                <a href="#" class="tv btn-category" onClick="onlyTv()"><i class="material-icons">tv</i>
-                    <p class="txt-nav-bar">Televisores</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyInformatica()"><i class="material-icons">laptop</i>
-                    <p class="txt-nav-bar">Informática</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyElectro()"><i
-                        class="material-icons">local_laundry_service</i>
-                    <p class="txt-nav-bar">Electrohogar</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyAudio()"><i class="material-icons">surround_sound</i>
-                    <p class="txt-nav-bar">Audio</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyImpresoras()"><i class="material-icons">print</i>
-                    <p class="txt-nav-bar">Impresoras</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyVideojuegos()"><i
-                        class="material-icons">videogame_asset</i>
-                    <p class="txt-nav-bar">Videojuegos</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyAccesorios()"><i class="material-icons">usb</i>
-                    <p class="txt-nav-bar">Accesorios</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyCamaras()"><i class="material-icons">photo_camera</i>
-                    <p class="txt-nav-bar">Cámaras</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyWatch()"><i class="material-icons">watch</i>
-                    <p class="txt-nav-bar">Smartwatch</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyHogar()"><i class="material-icons">home</i>
-                    <p class="txt-nav-bar">Hogar</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyJuguetes()"><i class="material-icons">casino</i>
-                    <p class="txt-nav-bar">Juguetes</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyLlantas()"><i class="material-icons">directions_car</i>
-                    <p class="txt-nav-bar">Llantas</p>
-                </a>
-                <a href="#" class="btn-category" onClick="onlyDeporte()"><i class="material-icons">directions_run</i>
-                    <p class="txt-nav-bar">Deportes</p>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- fin  menu bar    -->
-
-
-    <div class="container">
-
-        <!-- Ofertas de Lokura!!!    -->
-        <div class="row space-row" id="ofertasMiercoles">
-
-            <div class="col-md-3 col-xs-6 ofertas">
-                <!-- AdGlare: Ldg-Agos-Miercoles-01 -->
-                <span id=zone392291619></span>
-                <script async src='//alkosto.engine.adglare.net/?392291619'></script>
-            </div>
-            <div class="col-md-3 col-xs-6 ofertas">
-                <!-- AdGlare: Ldg-Agos-Miercoles-02 -->
-                <span id=zone592289308></span>
-                <script async src='//alkosto.engine.adglare.net/?592289308'></script>
-            </div>
-            <div class="col-md-3 col-xs-6 ofertas">
-                <!-- AdGlare: Ldg-Agos-Miercoles-03 -->
-                <span id=zone447099267></span>
-                <script async src='//alkosto.engine.adglare.net/?447099267'></script>
-            </div>
-            <div class="col-md-3 col-xs-6 ofertas">
-                <!-- AdGlare: Ldg-Agos-Miercoles-04 -->
-                <span id=zone114088944></span>
-                <script async src='//alkosto.engine.adglare.net/?114088944'></script>
-            </div>
-        </div>
-        <!-- Fin Ofertas de Lokura!!!    -->
-
-        <!-- Celulares    -->
-        <div class="celular row" id="categoriaCelulares" data-color="celular" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">settings_cell</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Celulares</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Cel-01 -->
-                    <span id=zone741469785></span>
-                    <script async src='//alkosto.engine.adglare.net/?741469785'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Cel-02 -->
-                    <span id=zone972746472></span>
-                    <script async src='//alkosto.engine.adglare.net/?972746472'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Cel-03 -->
-                    <span id=zone167182491></span>
-                    <script async src='//alkosto.engine.adglare.net/?167182491'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Cel-04 -->
-                    <span id=zone919694486></span>
-                    <script async src='//alkosto.engine.adglare.net/?919694486'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Cel-05 -->
-                    <span id=zone407405972></span>
-                    <script async src='//alkosto.engine.adglare.net/?407405972'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Cel-06 -->
-                        <span id=zone157751170></span>
-                        <script async src='//alkosto.engine.adglare.net/?157751170'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Cel-07 -->
-                        <span id=zone695789612></span>
-                        <script async src='//alkosto.engine.adglare.net/?695789612'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Cel-08 -->
-                        <span id=zone109178658></span>
-                        <script async src='//alkosto.engine.adglare.net/?109178658'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Cel-09 -->
-                        <span id=zone840433914></span>
-                        <script async src='//alkosto.engine.adglare.net/?840433914'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Cel-10 -->
-                    <span id=zone883232049></span>
-                    <script async src='//alkosto.engine.adglare.net/?883232049'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/telefonos-celulares">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Celulares    -->
-
-        <!-- Televisores    -->
-        <div class="row tv" id="categoriaTelevisores" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">tv</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Televisores</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Tv-01 -->
-                    <span id=zone718246774></span>
-                    <script async src='//alkosto.engine.adglare.net/?718246774'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Tv-02 -->
-                    <span id=zone555193002></span>
-                    <script async src='//alkosto.engine.adglare.net/?555193002'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Tv-03 -->
-                    <span id=zone108141100></span>
-                    <script async src='//alkosto.engine.adglare.net/?108141100'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Tv-04 -->
-                    <span id=zone297301146></span>
-                    <script async src='//alkosto.engine.adglare.net/?297301146'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Tv-05 -->
-                    <span id=zone939871129></span>
-                    <script async src='//alkosto.engine.adglare.net/?939871129'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Tv-06 -->
-                        <span id=zone419972272></span>
-                        <script async src='//alkosto.engine.adglare.net/?419972272'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Tv-07 -->
-                        <span id=zone367798646></span>
-                        <script async src='//alkosto.engine.adglare.net/?367798646'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Tv-08 -->
-                        <span id=zone295246519></span>
-                        <script async src='//alkosto.engine.adglare.net/?295246519'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Tv-09 -->
-                        <span id=zone711608225></span>
-                        <script async src='//alkosto.engine.adglare.net/?711608225'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Tv-10 -->
-                    <span id=zone516652315></span>
-                    <script async src='//alkosto.engine.adglare.net/?516652315'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/tv">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Televisores    -->
-
-        <!-- Informatica    -->
-        <div class="row" id="categoriaInformatica" style="margin-top: 100px;">
-            <div class="col-md-12">
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">laptop</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Informática</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Informatica-01 -->
-                    <span id=zone514708017></span>
-                    <script async src='//alkosto.engine.adglare.net/?514708017'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Informatica-02 -->
-                    <span id=zone898505149></span>
-                    <script async src='//alkosto.engine.adglare.net/?898505149'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Informatica-03 -->
-                    <span id=zone680166388></span>
-                    <script async src='//alkosto.engine.adglare.net/?680166388'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Informatica-04 -->
-                    <span id=zone588753468></span>
-                    <script async src='//alkosto.engine.adglare.net/?588753468'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Informatica-05 -->
-                    <span id=zone646284084></span>
-                    <script async src='//alkosto.engine.adglare.net/?646284084'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Informatica-06 -->
-                        <span id=zone691727965></span>
-                        <script async src='//alkosto.engine.adglare.net/?691727965'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Informatica-07 -->
-                        <span id=zone142491897></span>
-                        <script async src='//alkosto.engine.adglare.net/?142491897'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Informatica-08 -->
-                        <span id=zone164143320></span>
-                        <script async src='//alkosto.engine.adglare.net/?164143320'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Informatica-09 -->
-                        <span id=zone173858364></span>
-                        <script async src='//alkosto.engine.adglare.net/?173858364'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Informatica-10 -->
-                    <span id=zone230826939></span>
-                    <script async src='//alkosto.engine.adglare.net/?230826939'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/computadores-y-tablets">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Informatica    -->
-
-        <!-- Electrohogar    -->
-        <div class="row" id="categoriaElectro" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">local_laundry_service</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Electrohogar</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-electro-01 -->
-                    <span id=zone644451756></span>
-                    <script async src='//alkosto.engine.adglare.net/?644451756'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-electro-02 -->
-                    <span id=zone475013840></span>
-                    <script async src='//alkosto.engine.adglare.net/?475013840'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-electro-03 -->
-                    <span id=zone713198060></span>
-                    <script async src='//alkosto.engine.adglare.net/?713198060'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-electro-04 -->
-                    <span id=zone326794196></span>
-                    <script async src='//alkosto.engine.adglare.net/?326794196'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-electro-05 -->
-                    <span id=zone480031134></span>
-                    <script async src='//alkosto.engine.adglare.net/?480031134'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-electro-06 -->
-                        <span id=zone120673906></span>
-                        <script async src='//alkosto.engine.adglare.net/?120673906'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-electro-07 -->
-                        <span id=zone934485996></span>
-                        <script async src='//alkosto.engine.adglare.net/?934485996'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-electro-08 -->
-                        <span id=zone528947789></span>
-                        <script async src='//alkosto.engine.adglare.net/?528947789'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-electro-09 -->
-                        <span id=zone864176552></span>
-                        <script async src='//alkosto.engine.adglare.net/?864176552'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-electro-10 -->
-                    <span id=zone225033472></span>
-                    <script async src='//alkosto.engine.adglare.net/?225033472'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/electro">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Electrohogar    -->
-
-        <!-- Audio    -->
-        <div class="row" id="categoriaAudio" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">surround_sound</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Audio</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Audio-01 -->
-                    <span id=zone934413748></span>
-                    <script async src='//alkosto.engine.adglare.net/?934413748'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Audio-02 -->
-                    <span id=zone296336243></span>
-                    <script async src='//alkosto.engine.adglare.net/?296336243'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Audio-03 -->
-                    <span id=zone117229347></span>
-                    <script async src='//alkosto.engine.adglare.net/?117229347'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Audio-04 -->
-                    <span id=zone239068405></span>
-                    <script async src='//alkosto.engine.adglare.net/?239068405'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Audio-05 -->
-                    <span id=zone202375011></span>
-                    <script async src='//alkosto.engine.adglare.net/?202375011'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Audio-06 -->
-                        <span id=zone270071394></span>
-                        <script async src='//alkosto.engine.adglare.net/?270071394'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Audio-07 -->
-                        <span id=zone673045153></span>
-                        <script async src='//alkosto.engine.adglare.net/?673045153'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Audio-08 -->
-                        <span id=zone336987542></span>
-                        <script async src='//alkosto.engine.adglare.net/?336987542'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Audio-09 -->
-                        <span id=zone720626740></span>
-                        <script async src='//alkosto.engine.adglare.net/?720626740'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Audio-10 -->
-                    <span id=zone983914998></span>
-                    <script async src='//alkosto.engine.adglare.net/?983914998'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/audio">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Audio    -->
-
-        <!-- Impresoras    -->
-        <div class="row" id="categoriaImpresoras" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">print</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Impresoras</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Impre-01 -->
-                    <span id=zone267428374></span>
-                    <script async src='//alkosto.engine.adglare.net/?267428374'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Impre-02 -->
-                    <span id=zone812735856></span>
-                    <script async src='//alkosto.engine.adglare.net/?812735856'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Impre-03 -->
-                    <span id=zone288893484></span>
-                    <script async src='//alkosto.engine.adglare.net/?288893484'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Impre-04 -->
-                    <span id=zone171182133></span>
-                    <script async src='//alkosto.engine.adglare.net/?171182133'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Impre-05 -->
-                    <span id=zone176916642></span>
-                    <script async src='//alkosto.engine.adglare.net/?176916642'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/impresion">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Impresoras    -->
-
-        <!-- Videojuegos    -->
-        <div class="row" id="categoriaVideojuegos" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">videogame_asset</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Videojuegos</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-01 -->
-                    <span id=zone766571956></span>
-                    <script async src='//alkosto.engine.adglare.net/?766571956'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-02 -->
-                    <span id=zone285561310></span>
-                    <script async src='//alkosto.engine.adglare.net/?285561310'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-03 -->
-                    <span id=zone707787458></span>
-                    <script async src='//alkosto.engine.adglare.net/?707787458'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-04 -->
-                    <span id=zone783445383></span>
-                    <script async src='//alkosto.engine.adglare.net/?783445383'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-05 -->
-                    <span id=zone408706674></span>
-                    <script async src='//alkosto.engine.adglare.net/?408706674'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Videojuegos-06 -->
-                        <span id=zone355952457></span>
-                        <script async src='//alkosto.engine.adglare.net/?355952457'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Videojuegos-07 -->
-                        <span id=zone224558076></span>
-                        <script async src='//alkosto.engine.adglare.net/?224558076'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Videojuegos-08 -->
-                        <span id=zone305873016></span>
-                        <script async src='//alkosto.engine.adglare.net/?305873016'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Videojuegos-09 -->
-                        <span id=zone797854583></span>
-                        <script async src='//alkosto.engine.adglare.net/?797854583'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Videojuegos-10 -->
-                    <span id=zone708137204></span>
-                    <script async src='//alkosto.engine.adglare.net/?708137204'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/videojuegos">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Videojuegos    -->
-
-        <!-- Accesorios    -->
-        <div class="row" id="categoriaAccesorios" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">usb</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Accesorios</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Acceso-01 -->
-                    <span id=zone120126522></span>
-                    <script async src='//alkosto.engine.adglare.net/?120126522'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Acceso-02 -->
-                    <span id=zone585753904></span>
-                    <script async src='//alkosto.engine.adglare.net/?585753904'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Acceso-03 -->
-                    <span id=zone605704053></span>
-                    <script async src='//alkosto.engine.adglare.net/?605704053'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Acceso-04 -->
-                    <span id=zone164066249></span>
-                    <script async src='//alkosto.engine.adglare.net/?164066249'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Acceso-05 -->
-                    <span id=zone679141109></span>
-                    <script async src='//alkosto.engine.adglare.net/?679141109'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Acceso-06 -->
-                        <span id=zone466634193></span>
-                        <script async src='//alkosto.engine.adglare.net/?466634193'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Acceso-07 -->
-                        <span id=zone548144073></span>
-                        <script async src='//alkosto.engine.adglare.net/?548144073'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Acceso-08 -->
-                        <span id=zone721091503></span>
-                        <script async src='//alkosto.engine.adglare.net/?721091503'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Acceso-09 -->
-                        <span id=zone719881747></span>
-                        <script async src='//alkosto.engine.adglare.net/?719881747'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Acceso-10 -->
-                    <span id=zone785837533></span>
-                    <script async src='//alkosto.engine.adglare.net/?785837533'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/accesorios">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Accesorios    -->
-
-        <!-- Cámaras    -->
-        <div class="row" id="categoriaCamaras" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">photo_camera</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Cámaras</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Camaras-01 -->
-                    <span id=zone508781096></span>
-                    <script async src='//alkosto.engine.adglare.net/?508781096'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Camaras-02 -->
-                    <span id=zone675593237></span>
-                    <script async src='//alkosto.engine.adglare.net/?675593237'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Camaras-03 -->
-                    <span id=zone379749771></span>
-                    <script async src='//alkosto.engine.adglare.net/?379749771'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Camaras-04 -->
-                    <span id=zone526557390></span>
-                    <script async src='//alkosto.engine.adglare.net/?526557390'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Camaras-05 -->
-                    <span id=zone225619433></span>
-                    <script async src='//alkosto.engine.adglare.net/?225619433'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Camaras-06 -->
-                        <span id=zone268875026></span>
-                        <script async src='//alkosto.engine.adglare.net/?268875026'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Camaras-07 -->
-                        <span id=zone393477247></span>
-                        <script async src='//alkosto.engine.adglare.net/?393477247'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Camaras-08 -->
-                        <span id=zone957172064></span>
-                        <script async src='//alkosto.engine.adglare.net/?957172064'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Camaras-09 -->
-                        <span id=zone218762195></span>
-                        <script async src='//alkosto.engine.adglare.net/?218762195'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Camaras-10 -->
-                    <span id=zone505857816></span>
-                    <script async src='//alkosto.engine.adglare.net/?505857816'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/camaras">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Cámaras    -->
-
-        <!-- Smartwatch    -->
-        <div class="row" id="categoriaWatch" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">watch</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Smartwatch</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Watch-01 -->
-                    <span id=zone711551216></span>
-                    <script async src='//alkosto.engine.adglare.net/?711551216'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Watch-02 -->
-                    <span id=zone537966600></span>
-                    <script async src='//alkosto.engine.adglare.net/?537966600'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Watch-03 -->
-                    <span id=zone279334108></span>
-                    <script async src='//alkosto.engine.adglare.net/?279334108'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/relojes-inteligentes">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Smartwatch    -->
-
-        <!-- Hogar    -->
-        <div class="row" id="categoriaHogar" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">home</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Hogar</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Home-01 -->
-                    <span id=zone700494260></span>
-                    <script async src='//alkosto.engine.adglare.net/?700494260'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Home-02 -->
-                    <span id=zone877275713></span>
-                    <script async src='//alkosto.engine.adglare.net/?877275713'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Home-03 -->
-                    <span id=zone724659164></span>
-                    <script async src='//alkosto.engine.adglare.net/?724659164'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Home-04 -->
-                    <span id=zone839145884></span>
-                    <script async src='//alkosto.engine.adglare.net/?839145884'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Home-05 -->
-                    <span id=zone405955959></span>
-                    <script async src='//alkosto.engine.adglare.net/?405955959'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Home-06 -->
-                        <span id=zone329283712></span>
-                        <script async src='//alkosto.engine.adglare.net/?329283712'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Home-07 -->
-                        <span id=zone954219322></span>
-                        <script async src='//alkosto.engine.adglare.net/?954219322'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Home-08 -->
-                        <span id=zone685506707></span>
-                        <script async src='//alkosto.engine.adglare.net/?685506707'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Home-09 -->
-                        <span id=zone269751604></span>
-                        <script async src='//alkosto.engine.adglare.net/?269751604'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Home-10 -->
-                    <span id=zone619346691></span>
-                    <script async src='//alkosto.engine.adglare.net/?619346691'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/hogar">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Hogar    -->
-
-        <!-- Juguetes    -->
-        <div class="row" id="categoriaJuguetes" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">casino</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Juguetes</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-01 -->
-                    <span id=zone350638212></span>
-                    <script async src='//alkosto.engine.adglare.net/?350638212'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-02 -->
-                    <span id=zone926673189></span>
-                    <script async src='//alkosto.engine.adglare.net/?926673189'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-03 -->
-                    <span id=zone133526854></span>
-                    <script async src='//alkosto.engine.adglare.net/?133526854'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-04 -->
-                    <span id=zone558357761></span>
-                    <script async src='//alkosto.engine.adglare.net/?558357761'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-05 -->
-                    <span id=zone333906617></span>
-                    <script async src='//alkosto.engine.adglare.net/?333906617'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Juguetes-06 -->
-                        <span id=zone660873082></span>
-                        <script async src='//alkosto.engine.adglare.net/?660873082'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Juguetes-07 -->
-                        <span id=zone483881858></span>
-                        <script async src='//alkosto.engine.adglare.net/?483881858'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Juguetes-08 -->
-                        <span id=zone526953555></span>
-                        <script async src='//alkosto.engine.adglare.net/?526953555'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Juguetes-09 -->
-                        <span id=zone559039691></span>
-                        <script async src='//alkosto.engine.adglare.net/?559039691'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Juguetes-10 -->
-                    <span id=zone581061877></span>
-                    <script async src='//alkosto.engine.adglare.net/?581061877'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/jugueteria">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Juguetes    -->
-
-        <!-- Llantas    -->
-        <div class="row" id="categoriaLlantas" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">directions_car</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Llantas</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Llantas-01 -->
-                    <span id=zone102264050></span>
-                    <script async src='//alkosto.engine.adglare.net/?102264050'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Llantas-02 -->
-                    <span id=zone937313252></span>
-                    <script async src='//alkosto.engine.adglare.net/?937313252'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Llantas-03 -->
-                    <span id=zone756962160></span>
-                    <script async src='//alkosto.engine.adglare.net/?756962160'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Llantas-04 -->
-                    <span id=zone415954345></span>
-                    <script async src='//alkosto.engine.adglare.net/?415954345'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Llantas-05 -->
-                    <span id=zone310542085></span>
-                    <script async src='//alkosto.engine.adglare.net/?310542085'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Llantas-06 -->
-                        <span id=zone483018800></span>
-                        <script async src='//alkosto.engine.adglare.net/?483018800'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Llantas-07 -->
-                        <span id=zone301797426></span>
-                        <script async src='//alkosto.engine.adglare.net/?301797426'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Llantas-08 -->
-                        <span id=zone800201419></span>
-                        <script async src='//alkosto.engine.adglare.net/?800201419'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Llantas-09 -->
-                        <span id=zone560789450></span>
-                        <script async src='//alkosto.engine.adglare.net/?560789450'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Llantas-10 -->
-                    <span id=zone646445329></span>
-                    <script async src='//alkosto.engine.adglare.net/?646445329'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/autos/llantas">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Llantas    -->
-
-        <!-- Deportes    -->
-        <div class="row" id="categoriaDeportes" style="margin-top: 100px;">
-            <div class="col-md-12">
-
-                <div class="filete-left">
-                </div>
-                <div class="icon-category">
-                    <i class="material-icons center-icon-category">directions_run</i>
-                </div>
-                <div class="filete-right">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p class="titlte-section" style="margin-top: 30px; margin-bottom: 30px;">Deportes</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Deportes-01 -->
-                    <span id=zone412603904></span>
-                    <script async src='//alkosto.engine.adglare.net/?412603904'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Deportes-02 -->
-                    <span id=zone363196515></span>
-                    <script async src='//alkosto.engine.adglare.net/?363196515'></script>
-                </div>
-                <div class="col-md-4 margin-mobile">
-                    <!-- AdGlare: Ldg-Agos-Deportes-03 -->
-                    <span id=zone580388794></span>
-                    <script async src='//alkosto.engine.adglare.net/?580388794'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Deportes-04 -->
-                    <span id=zone671691171></span>
-                    <script async src='//alkosto.engine.adglare.net/?671691171'></script>
-                </div>
-                <div class="col-md-4" style="margin-top:13px;">
-                    <!-- AdGlare: Ldg-Agos-Deportes-05 -->
-                    <span id=zone104582708></span>
-                    <script async src='//alkosto.engine.adglare.net/?104582708'></script>
-                </div>
-            </div>
-            <div class="row" id="secondSectioncategory" style="margin-top: 13px;">
-                <div class="col-md-8" style="padding-left: 0px; padding-right: 0px;">
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Deportes-06 -->
-                        <span id=zone230995471></span>
-                        <script async src='//alkosto.engine.adglare.net/?230995471'></script>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- AdGlare: Ldg-Agos-Deportes-07 -->
-                        <span id=zone968389945></span>
-                        <script async src='//alkosto.engine.adglare.net/?968389945'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Deportes-08 -->
-                        <span id=zone409668171></span>
-                        <script async src='//alkosto.engine.adglare.net/?409668171'></script>
-                    </div>
-                    <div class="col-md-6" style="margin-top:13px;">
-                        <!-- AdGlare: Ldg-Agos-Deportes-09 -->
-                        <span id=zone694429264></span>
-                        <script async src='//alkosto.engine.adglare.net/?694429264'></script>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- AdGlare: Ldg-Agos-Deportes-10 -->
-                    <span id=zone826851762></span>
-                    <script async src='//alkosto.engine.adglare.net/?826851762'></script>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: center; margin-top: 40px;">
-                    <a class="btn-ver-mas" href="https://www.alkosto.com/gimnasio">Ver más ofertas</a>
-                </div>
-            </div>
-        </div>
-        <!--    Fin Deportes    -->
-
-    </div>
-
 </body>
-
-
 
 </html>
